@@ -267,4 +267,20 @@ class PasswordVerifyTest {
         assertTrue(verifica);
     }
 
+    @Test
+    void passPablito(){
+        //ARRANGE
+        p = new PasswordVerify();
+        String contrasenya = "#P4blit0cl4v0uncl4vit0#";
+
+        //ACT
+        String resultado = p.passwordString(contrasenya);
+        boolean verifica = p.verificaPassw(contrasenya);
+
+        //ASSERTEQUALS
+        assertEquals("",resultado);
+        assertTrue(verifica);
+    }
+
+
 }
