@@ -146,6 +146,21 @@ class PasswordVerifyTest {
         assertFalse(verifica);
     }
 
+    @Test
+    void passholacaracola12(){
+        //ARRANGE
+        p = new PasswordVerify();
+        String contrasenya = "holacaracola12";
+
+        //ACT
+        String resultado = p.passwordString(contrasenya);
+        boolean verifica = p.verificaPassw();
+
+        //ASSERTEQUALS
+        assertEquals(pocasMayus + pocosCaracteresEspeciales,resultado);
+        assertFalse(verifica);
+    }
+
 
 
 
