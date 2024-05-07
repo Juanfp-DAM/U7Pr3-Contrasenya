@@ -191,7 +191,20 @@ class PasswordVerifyTest {
         assertFalse(verifica);
     }
 
+    @Test
+    void passho12AExcl(){
+        //ARRANGE
+        p = new PasswordVerify();
+        String contrasenya = "ho12A!";
 
+        //ACT
+        String resultado = p.passwordString(contrasenya);
+        boolean verifica = p.verificaPassw();
+
+        //ASSERTEQUALS
+        assertEquals(pocasLetras,resultado);
+        assertFalse(verifica);
+    }
 
 
 
