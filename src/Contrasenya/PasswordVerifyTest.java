@@ -56,6 +56,21 @@ class PasswordVerifyTest {
         assertFalse(verifica);
     }
 
+    @Test
+    void passDosDigitos(){
+        //ARRANGE
+        p = new PasswordVerify();
+        String contrasenya = "hola12";
+
+        //ACT
+        String resultado = p.passwordString(contrasenya);
+        boolean verifica = p.verificaPassw();
+
+        //ASSERTEQUALS
+        assertEquals(pocasLetras + pocasMayus + pocosCaracteresEspeciales ,resultado);
+        assertFalse(verifica);
+    }
+
 
 
 
