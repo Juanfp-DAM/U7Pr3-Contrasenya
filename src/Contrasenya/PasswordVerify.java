@@ -37,7 +37,7 @@ public class PasswordVerify {
                 cuentaMayus++;
             }
             //Si tiene cualquier cosa distinta de A-Z, a-z, 0-9
-            if(guardaLetra.matches("[^\\w\\s]")){
+            if(guardaLetra.matches("[^\\w\\s]")){ // añadir .* al principio y al final si no pasase el string (pero yo lo hago letra por letra asi que no creo que de problemas)
                 cuentaSimbolo++;
             }
         }

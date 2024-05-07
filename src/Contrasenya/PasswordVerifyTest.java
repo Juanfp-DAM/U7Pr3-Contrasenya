@@ -131,6 +131,21 @@ class PasswordVerifyTest {
         assertFalse(verifica);
     }
 
+    @Test
+    void passMayusNum(){
+        //ARRANGE
+        p = new PasswordVerify();
+        String contrasenya = "hola12A";
+
+        //ACT
+        String resultado = p.passwordString(contrasenya);
+        boolean verifica = p.verificaPassw();
+
+        //ASSERTEQUALS
+        assertEquals(pocasLetras + pocosCaracteresEspeciales,resultado);
+        assertFalse(verifica);
+    }
+
 
 
 
