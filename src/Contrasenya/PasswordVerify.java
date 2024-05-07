@@ -54,9 +54,9 @@ public class PasswordVerify {
         return requisitos;
     }
 
-    public boolean verificaPassw(){
+    public boolean verificaPassw(String psw){
         boolean verificador = true;
-        if(!passwordString(pass).equals("")){
+        if(!passwordString(psw).equals("")){
             verificador=false;
         }
         return verificador;

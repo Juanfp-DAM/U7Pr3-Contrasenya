@@ -19,7 +19,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocosNumeros + pocasMayus + pocosCaracteresEspeciales ,resultado);
@@ -34,7 +34,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocosNumeros + pocasMayus + pocosCaracteresEspeciales ,resultado);
@@ -49,7 +49,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocosNumeros + pocasMayus + pocosCaracteresEspeciales ,resultado);
@@ -64,7 +64,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocasMayus + pocosCaracteresEspeciales ,resultado);
@@ -79,7 +79,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocosNumeros+ pocosCaracteresEspeciales ,resultado);
@@ -94,7 +94,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocosNumeros+ pocasMayus ,resultado);
@@ -109,7 +109,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocosNumeros,resultado);
@@ -124,7 +124,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocasMayus,resultado);
@@ -139,7 +139,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras + pocosCaracteresEspeciales,resultado);
@@ -154,7 +154,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasMayus + pocosCaracteresEspeciales,resultado);
@@ -169,7 +169,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocosNumeros + pocasMayus,resultado);
@@ -184,7 +184,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocosNumeros + pocosCaracteresEspeciales,resultado);
@@ -199,7 +199,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasLetras,resultado);
@@ -214,7 +214,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocosNumeros,resultado);
@@ -230,7 +230,7 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocasMayus,resultado);
@@ -245,13 +245,26 @@ class PasswordVerifyTest {
 
         //ACT
         String resultado = p.passwordString(contrasenya);
-        boolean verifica = p.verificaPassw();
+        boolean verifica = p.verificaPassw(contrasenya);
 
         //ASSERTEQUALS
         assertEquals(pocosCaracteresEspeciales,resultado);
         assertFalse(verifica);
     }
 
+    @Test
+    void holacaracola12AExcl(){
+        //ARRANGE
+        p = new PasswordVerify();
+        String contrasenya = "holacaracola12A!";
 
+        //ACT
+        String resultado = p.passwordString(contrasenya);
+        boolean verifica = p.verificaPassw(contrasenya);
+
+        //ASSERTEQUALS
+        assertEquals("",resultado);
+        assertTrue(verifica);
+    }
 
 }
